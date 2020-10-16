@@ -1,0 +1,50 @@
+@import url('./figure.css');
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#ff0000, #5a0000);
+}
+
+.card-container {
+    margin: 10px;
+    position: relative;
+    width: 251px;
+    height: 375px;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-image: url('../img/shirt.jpg');
+    background-size: cover;
+    color: #333333;
+}
+
+.back-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #fafafa;
+    color: #333333;
+    transform: rotateY(180deg);
+}

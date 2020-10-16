@@ -1,0 +1,44 @@
+.heart {
+    position: relative;
+    height: 170px;
+    width: 200px;
+}
+
+.heart::before,
+.heart::after {
+    position: absolute;
+    content: "";
+    height: 160px;
+    width: 100px;
+    background-color: #E80202;
+    border-radius: 50px 50px 0 0;
+}
+
+
+.heart::before {
+    left: 100px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.heart-big::before {
+    transform: rotate(-45deg) scale(0.5);
+}
+
+.heart-big::after {
+    transform: rotate(45deg) scale(0.5);
+}
+
+.heart-small::before {
+    transform: rotate(-45deg) scale(0.2);
+}
+
+.heart-small::after {
+    transform: rotate(45deg) scale(0.2);
+}
